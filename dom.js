@@ -1,4 +1,4 @@
-/* dom utilies */
+/* dom utilities */
 
 function domReady(fn) {
 	document.addEventListener("DOMContentLoaded", fn);
@@ -33,5 +33,9 @@ function toggle(el) {
 		return;
 	}
 	el.style.display = "block";
+}
+
+function isStandalone() {
+	return (("standalone" in window.navigator) && window.navigator.standalone);
 }
 
